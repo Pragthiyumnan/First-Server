@@ -1,23 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Classcomponent from './components/Classcomponent';
+import FunctionalComponent from './components/FunctionalComponents';
+import {useState} from 'react';
 function App() {
+  let name = [
+    {n:0,m:"vanakam"},
+    {m:"hello",n:"hi"},
+  ];
+
+  let [id,setid] = useState(7092472971);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Class Components</h1>
+      <Classcomponent />
+      <h1>Functional Component</h1>
+
+      <FunctionalComponent names={name} id={id} setid={setid}/>
     </div>
   );
 }
